@@ -7,18 +7,24 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "int:extract": "ng xi18n --output-path src/locale"
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~8.0.0",
+    "@angular/animations": "^8.0.0",
+    "@angular/cdk": "^8.0.1",
     "@angular/common": "~8.0.0",
     "@angular/compiler": "~8.0.0",
     "@angular/core": "~8.0.0",
     "@angular/forms": "~8.0.0",
+    "@angular/material": "^8.0.1",
     "@angular/platform-browser": "~8.0.0",
     "@angular/platform-browser-dynamic": "~8.0.0",
     "@angular/router": "~8.0.0",
+    "@ngx-translate/core": "^11.0.1",
+    "@ngx-translate/http-loader": "^4.0.0",
+    "angular-i18n": "^1.7.8",
     "rxjs": "~6.4.0",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
