@@ -1,3 +1,40 @@
-<p>
-  register works!
-</p>
+<div class="form-container">
+  <form name="registerForm" class="register-form" [formGroup]='registerForm' (ngSubmit)="onSubmit()" novalidate>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Register</mat-card-title>
+      </mat-card-header>
+      <div *ngIf="errorMessage" class="errorMessage">Invalid Request</div>
+      <mat-card-content>
+        <div class="row">
+          <mat-form-field class="full-width">
+            <!-- <mat-icon matPrefix>account-circle</mat-icon> -->
+            <mat-icon matPrefix>account_circle</mat-icon>
+            <input type="text" matInput title="registerFormEmail" placeholder="Email" formControlName="email">
+            <mat-error *ngIf="registerForm.controls['email'].hasError('required')">Required
+            </mat-error>
+            <mat-error *ngIf="registerForm.controls['email'].hasError('email')">
+              Invalid email format
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-icon matPrefix>lock_outline</mat-icon>
+            <input matInput title="registerFormPassword" placeholder="Password" formControlName="password" type="password">
+            <mat-error *ngIf="registerForm.controls['password'].hasError('required')">Required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+              <mat-icon matPrefix>tag_faces</mat-icon>
+              <input matInput title="registerFormPseudo" placeholder="Pseudo" formControlName="pseudo" type="text">
+              <mat-error *ngIf="registerForm.controls['pseudo'].hasError('required')">Required
+              </mat-error>
+            </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <span (click)="redirectToLoginPage()" class="registerLink">Already registered ? Click Here to login</span>
+        <button name="registerFormSubmit" mat-raised-button [disabled]="!registerForm.valid" type="submit"> Submit </button>
+    </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

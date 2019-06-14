@@ -1,3 +1,31 @@
-<p>
-  login works!
-</p>
+<div class="form-container">
+  <form name="loginForm" class="login-form" [formGroup]='loginForm' (ngSubmit)="onSubmit()" novalidate>
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+      </mat-card-header>
+      <div *ngIf="errorMessage" class="errorMessage">Invalid Login</div>
+      <mat-card-content>
+        <div class="row">
+          <mat-form-field class="full-width">
+            <!-- <mat-icon matPrefix>account-circle</mat-icon> -->
+            <mat-icon matPrefix>account_circle</mat-icon>
+            <input type="text" matInput title="loginFormEmail" placeholder="Email" formControlName="email">
+            <mat-error *ngIf="loginForm.controls['email'].hasError('required')">Required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="full-width">
+            <mat-icon matPrefix>lock_outline</mat-icon>
+            <input matInput title="loginFormPassword" placeholder="Password" formControlName="password" type="password">
+            <mat-error *ngIf="loginForm.controls['password'].hasError('required')">Required
+            </mat-error>
+          </mat-form-field>
+        </div>
+      </mat-card-content>
+      <mat-card-actions>
+        <span (click)="redirectToRegisterPage()" class="registerLink">Not registered yet ? Click Here</span>
+        <button name="loginFormSubmit" mat-raised-button [disabled]="!loginForm.valid" type="submit"> Submit </button>
+    </mat-card-actions>
+    </mat-card>
+  </form>
+</div>
