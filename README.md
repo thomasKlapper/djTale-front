@@ -5,6 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 `npm run local-dev` will run a localhost application which communicates with a localhost backend
+
 `npm run network-dev` will run a localhost application which communicates with a backend on the network. You will need to configure djtale-host in your host file. 
 
 
