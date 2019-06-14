@@ -4,7 +4,9 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`npm run local-dev` will run a localhost application which communicates with a localhost backend
+`npm run network-dev` will run a localhost application which communicates with a backend on the network. You will need to configure djtale-host in your host file. 
+
 
 ## Code scaffolding
 
