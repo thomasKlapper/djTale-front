@@ -5,7 +5,6 @@ import { environment } from 'src/environments/environment';
 import { map, catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
 import { BackEndResponse } from '../classes/backendresponse';
-// import { JwtHelperService } from '@auth0/angular-jwt';
 import { AuthModule } from './auth.module';
 
 
@@ -60,10 +59,5 @@ export class AuthService {
     window.localStorage.removeItem('jwt');
     this.router.navigate(['auth/login']);
   }
-
-
-  // public isUserTokenExpired(rawToken) {
-  //   this.jwtHelper.isTokenExpired(rawToken)
-  // }
 
 }
