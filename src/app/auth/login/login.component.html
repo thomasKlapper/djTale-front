@@ -1,1 +1,36 @@
-login form 
+<div class="main-container">
+  <div class="left-side">
+    <form
+      class="login-form"
+      [formGroup]="loginForm"
+      (ngSubmit)="onSubmit()"
+      novalidate
+    >
+      <mat-form-field>
+        <input matInput formControlName="email" />
+        <mat-label>
+          <mat-icon>account_circle</mat-icon>
+          {{ "Email" | translate }}
+        </mat-label>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="password" type="password" />
+        <mat-label>
+          <mat-icon>lock</mat-icon>{{ "Password" | translate }}
+        </mat-label>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        type="submit"
+        [disabled]="!loginForm.valid"
+        class="dj-primary-button"
+      >
+        {{ "Connexion" | translate }}
+      </button>
+    </form>
+    <button mat-raised-button class="dj-secondary-button">
+      {{ "Inscription" | translate }}
+    </button>
+  </div>
+  <div class="right-side"></div>
+</div>

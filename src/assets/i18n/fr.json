@@ -1,3 +1,7 @@
 {
-  "HELLO": "fr"
+  "HELLO": "fr",
+  "Email": "Email",
+  "Password": "Mot de passe",
+  "Connexion": "Se connecter",
+  "Inscription": "S'inscrire"
 }

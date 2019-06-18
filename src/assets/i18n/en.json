@@ -1,3 +1,7 @@
 {
-  "HELLO": "en"
+  "HELLO": "en",
+  "Email": "Email",
+  "Password": "Password",
+  "Connexion": "Log in",
+  "Inscription": "Sign in"
 }
