@@ -1,0 +1,106 @@
+/**********************/
+/*All colors variables*/
+/**********************/
+$primary-color: #000066;
+$secondary-color: #bebefe;
+$white: #ffffff;
+$disabled: #696969;
+
+/*********************/
+/*All fonts variables*/
+/*********************/
+@font-face {
+  font-family: "Roboto";
+  src: url("src/assets/font/Roboto-Regular.ttf");
+}
+
+/**************/
+/*Main content*/
+/**************/
+.main-container {
+  display: flex;
+  font-family: "Roboto", "arial", sans-serif;
+}
+
+@mixin primary-button {
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 200px;
+  text-transform: uppercase;
+  margin: 10px 0;
+  background-color: $primary-color;
+  color: $white;
+  transition: all 0.2s ease;
+}
+
+@mixin primary-button-hover {
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(190, 190, 254, 1);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(190, 190, 254, 1);
+  box-shadow: 0px 0px 40px 0px rgba(190, 190, 254, 1);
+}
+
+@mixin secondary-button {
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 20px;
+  width: 200px;
+  text-transform: uppercase;
+  margin: 10px 0;
+  background-color: $white;
+  color: $primary-color;
+  border: 1px solid $secondary-color;
+  transition: all 0.2s ease;
+  box-shadow: unset;
+}
+
+@mixin secondary-button-hover {
+  color: $white;
+  border: 1px solid $primary-color;
+  background-color: $primary-color;
+}
+
+/************/
+/*Formulaire*/
+/************/
+
+.mat-icon {
+  margin-right: 5px;
+}
+
+.mat-form-field-appearance-legacy {
+  .mat-form-field-underline {
+    background-color: $primary-color !important;
+  }
+}
+
+.mat-form-field {
+  .mat-form-field-wrapper {
+    .mat-input-element {
+      font-size: 14px;
+      color: $primary-color;
+      font-weight: bold;
+    }
+    .mat-form-field-label {
+      color: $primary-color;
+      font-size: 14px;
+    }
+    .mat-form-field-underline {
+      .mat-form-field-ripple {
+        background-color: $primary-color;
+      }
+    }
+  }
+  &.mat-focused {
+    .mat-form-field-wrapper {
+      .mat-form-field-label {
+        color: $primary-color;
+      }
+      .mat-form-field-underline {
+        .mat-form-field-ripple {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}
