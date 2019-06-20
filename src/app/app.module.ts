@@ -9,6 +9,8 @@ import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { from } from "rxjs";
 import { AuthModule } from "./auth/auth.module";
+import { RoomListComponent } from './components/room-list-components/room-list/room-list.component';
+import { RoomComponent } from './components/room-components/room/room.component';
 
 
 // AoT requires an exported function for factories
@@ -17,7 +19,7 @@ export function HttpLoaderFactory(http: HttpClient) {
 }
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, RoomListComponent, RoomComponent],
   imports: [
     AuthModule,
     BrowserModule,

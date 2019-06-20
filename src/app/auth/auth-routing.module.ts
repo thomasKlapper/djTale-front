@@ -9,7 +9,6 @@ import { IsLoggedInGuard } from './guards/isLoggedInGuard';
 
 
 const authRoutes: Routes = [
-    // { path: '', component: AppComponent }, // default route of the module
     { path: 'auth/login', component: LoginComponent, canActivate: [IsLoggedOutGuard] },
     { path: 'auth/register', component: RegisterComponent, canActivate: [IsLoggedOutGuard] },
 ];
