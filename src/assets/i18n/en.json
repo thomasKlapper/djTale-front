@@ -1,7 +1,19 @@
 {
-  "HELLO": "en",
-  "Email": "Email",
-  "Password": "Password",
-  "Connexion": "Log in",
-  "Inscription": "Sign in"
+  "LOGIN_REGISTER": {
+    "Email": "Email",
+    "InvalideEmail": "Email must be a valid email address",
+    "RequiredEmail": "Email is required",
+    "Password": "Password",
+    "RequiredPassword": "Password is required",
+    "Connexion": "Log in",
+    "Inscription": "Sign in",
+    "Password_Forgotten": "Password forgotten ?",
+    "Pseudo": "Pseudo",
+    "InvalidPseudo": "Pseudo must be at least 3 characters",
+    "RequiredPseudo": "Pseudo is required",
+    "PasswordConfirm": "Confirm Password",
+    "InvalidPassword": "Passwords don't match",
+    "InvalidCredential": "Login and/or password are not correct",
+    "ValidRegister": "Your inscription is valid !"
+  }
 }

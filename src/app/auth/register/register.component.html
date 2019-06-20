@@ -1,1 +1,100 @@
-register form
+<div class="main-container">
+  <div class="left-side">
+    <form
+      class="register-form"
+      [formGroup]="registerForm"
+      (ngSubmit)="onSubmit()"
+      novalidate
+    >
+      <mat-form-field>
+        <input matInput formControlName="email" />
+        <mat-label>
+          <fa name="user"></fa>
+          {{ "LOGIN_REGISTER.Email" | translate }}
+        </mat-label>
+        <mat-error
+          *ngIf="
+            registerForm.controls['email'].hasError('required') &&
+            registerForm.get('email').touched
+          "
+        >
+          <fa name="exclamation-circle"></fa>
+          {{ "LOGIN_REGISTER.RequiredEmail" | translate }}
+        </mat-error>
+        <mat-error *ngIf="registerForm.controls['email'].hasError('email')">
+          <fa name="exclamation-circle"></fa>
+          {{ "LOGIN_REGISTER.InvalidEmail" | translate }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="pseudo" />
+        <mat-label>
+          <fa name="headphones"></fa>
+          {{ "LOGIN_REGISTER.Pseudo" | translate }}
+        </mat-label>
+        <mat-error
+          *ngIf="
+            registerForm.controls['pseudo'].hasError('required') &&
+            registerForm.get('pseudo').touched
+          "
+        >
+          <fa name="exclamation-circle"></fa>
+          {{ "LOGIN_REGISTER.RequiredPseudo" | translate }}
+        </mat-error>
+        <mat-error
+          *ngIf="registerForm.controls['pseudo'].hasError('minlength')"
+        >
+          <fa name="exclamation-circle"></fa>
+          {{ "LOGIN_REGISTER.InvalidPseudo" | translate }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="password" type="password" />
+        <mat-label>
+          <fa name="lock"></fa>
+          {{ "LOGIN_REGISTER.Password" | translate }}
+        </mat-label>
+        <mat-error
+          *ngIf="
+            registerForm.controls['password'].hasError('required') &&
+            registerForm.get('password').touched
+          "
+        >
+          <fa name="exclamation-circle"></fa>
+          {{ "LOGIN_REGISTER.RequiredPassword" | translate }}
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput formControlName="confirmPassword" type="password" />
+        <mat-label>
+          <fa name="lock"></fa>
+          {{ "LOGIN_REGISTER.PasswordConfirm" | translate }}
+        </mat-label>
+        <mat-error
+          *ngIf="
+            registerForm.controls['confirmPassword'].hasError('required') &&
+            registerForm.get('confirmPassword').touched
+          "
+        >
+          <fa name="exclamation-circle"></fa>
+          {{ "LOGIN_REGISTER.RequiredPassword" | translate }}
+        </mat-error>
+        <mat-error
+          *ngIf="registerForm.controls['confirmPassword'].hasError('mustMatch')"
+        >
+          <fa name="exclamation-circle"></fa>
+          {{ "LOGIN_REGISTER.InvalidPassword" | translate }}
+        </mat-error>
+      </mat-form-field>
+      <button
+        mat-raised-button
+        type="submit"
+        [disabled]="!registerForm.valid"
+        class="dj-primary-button"
+      >
+        {{ "LOGIN_REGISTER.Inscription" | translate }}
+      </button>
+    </form>
+  </div>
+  <div class="right-side"></div>
+</div>

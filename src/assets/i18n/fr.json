@@ -1,7 +1,19 @@
 {
-  "HELLO": "fr",
-  "Email": "Email",
-  "Password": "Mot de passe",
-  "Connexion": "Se connecter",
-  "Inscription": "S'inscrire"
+  "LOGIN_REGISTER": {
+    "Email": "Email",
+    "InvalidEmail": "Le format du mail n'est pas valide",
+    "RequiredEmail": "L'email est requis",
+    "Password": "Mot de passe",
+    "RequiredPassword": "Le mot de passe est requis",
+    "Connexion": "Se connecter",
+    "Inscription": "S'inscrire",
+    "Password_Forgotten": "Mot de passe oublié ?",
+    "Pseudo": "Pseudo",
+    "InvalidPseudo": "Le pseudo doit faire au moins 3 caractères",
+    "RequiredPseudo": "Le pseudonyme est requis",
+    "PasswordConfirm": "Confirmer le mot de passe",
+    "InvalidPassword": "Les mots de passe ne correspondent pas",
+    "InvalidCredential": "Le login et/ou le mot de passe ne correspondent pas",
+    "ValidRegister": "L'inscription a fonctionné"
+  }
 }

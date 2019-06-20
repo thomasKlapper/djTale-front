@@ -1,12 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { AuthService } from "../auth.service";
 import { Router } from "@angular/router";
-import {
-  FormControl,
-  FormGroup,
-  Validators,
-  FormBuilder
-} from "@angular/forms";
+import { FormGroup, Validators, FormBuilder } from "@angular/forms";
+import { TranslateService } from "@ngx-translate/core";
 
 @Component({
   selector: "login",
@@ -15,13 +11,16 @@ import {
 })
 export class LoginComponent implements OnInit {
   submitted = false;
-  errorMessage = "";
+  message = "";
+  // boolean for error message
+  errorLogin = false;
   loginForm: FormGroup;
 
   constructor(
     private authService: AuthService,
     private router: Router,
-    private _fb: FormBuilder
+    private _fb: FormBuilder,
+    private translate: TranslateService
   ) {}
 
   ngOnInit() {
@@ -32,17 +31,23 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.errorMessage = "";
     console.log(this.loginForm.value);
     if (this.loginForm.valid) {
+      this.errorLogin = false;
       this.authService
         .login(this.loginForm.value.email, this.loginForm.value.password)
         .subscribe(res => {
           if (res.statusCode === 200) {
-            console.log("Login success");
             this.router.navigate(["room-list"]);
+          } else if (res.statusCode === 400) {
+            this.errorLogin = true;
+            this.translate
+              .get("LOGIN_REGISTER.InvalidCredential")
+              .subscribe(trans => {
+                this.message = trans;
+              });
           } else {
-            this.errorMessage = res.codeMessage;
+            this.message = res.codeMessage;
           }
         });
     }
