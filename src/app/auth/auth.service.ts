@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment';
 import { map, catchError } from 'rxjs/operators';
 import { Observable, of } from 'rxjs';
-import { BackEndResponse } from '../classes/backendresponse';
+import { BackEndResponse } from '../../assets/classes/backendresponse';
 import { AuthModule } from './auth.module';
 
 

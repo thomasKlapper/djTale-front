@@ -7,9 +7,9 @@ import { TranslateHttpLoader } from "@ngx-translate/http-loader";
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-// import { AppMaterialModule } from "./app-material/app-material.module";
 import { from } from "rxjs";
 import { AuthModule } from "./auth/auth.module";
+
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -31,7 +31,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     AppRoutingModule,
     BrowserAnimationsModule
-    // AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
