@@ -1,11 +1,6 @@
 <div class="main-container">
   <div class="left-side">
-    <form
-      class="login-form"
-      [formGroup]="loginForm"
-      (ngSubmit)="onSubmit()"
-      novalidate
-    >
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()" novalidate>
       <mat-form-field>
         <input matInput formControlName="email" />
         <mat-label>
@@ -19,12 +14,7 @@
           <mat-icon>lock</mat-icon>{{ "Password" | translate }}
         </mat-label>
       </mat-form-field>
-      <button
-        mat-raised-button
-        type="submit"
-        [disabled]="!loginForm.valid"
-        class="dj-primary-button"
-      >
+      <button mat-raised-button type="submit" [disabled]="!loginForm.valid" class="dj-primary-button">
         {{ "Connexion" | translate }}
       </button>
     </form>
