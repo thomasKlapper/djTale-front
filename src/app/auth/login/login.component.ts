@@ -40,7 +40,7 @@ export class LoginComponent implements OnInit {
         .subscribe(res => {
           if (res.statusCode === 200) {
             console.log("Login success");
-            this.router.navigate(["home"]);
+            this.router.navigate(["room-list"]);
           } else {
             this.errorMessage = res.codeMessage;
           }
@@ -49,6 +49,6 @@ export class LoginComponent implements OnInit {
   }
 
   redirectToRegisterPage() {
-    this.router.navigate(["auth/register"]);
+    this.router.navigate(["register"]);
   }
 }

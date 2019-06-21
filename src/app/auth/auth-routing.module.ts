@@ -9,8 +9,8 @@ import { IsLoggedInGuard } from './guards/isLoggedInGuard';
 
 
 const authRoutes: Routes = [
-    { path: 'auth/login', component: LoginComponent, canActivate: [IsLoggedOutGuard] },
-    { path: 'auth/register', component: RegisterComponent, canActivate: [IsLoggedOutGuard] },
+    { path: 'login', component: LoginComponent, canActivate: [IsLoggedOutGuard] },
+    { path: 'register', component: RegisterComponent, canActivate: [IsLoggedOutGuard] },
 ];
 
 @NgModule({

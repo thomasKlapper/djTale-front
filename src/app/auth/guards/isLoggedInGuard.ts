@@ -32,7 +32,7 @@ export class IsLoggedInGuard implements CanActivate {
     redirectToLoginPage() {
         window.localStorage.removeItem('user');
         window.localStorage.removeItem('jwt');
-        this.router.navigate(['auth/login']);
+        this.router.navigate(['login']);
     }
 
     isUserTokenExpired(rawToken) {
