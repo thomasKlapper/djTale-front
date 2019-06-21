@@ -50,7 +50,7 @@
     <button
       mat-raised-button
       class="dj-secondary-button"
-      [routerLink]="['register']"
+      (click)="redirectToRegisterPage()"
     >
       {{ "LOGIN_REGISTER.Inscription" | translate }}
     </button>

@@ -14,6 +14,7 @@
     "PasswordConfirm": "Confirm Password",
     "InvalidPassword": "Passwords don't match",
     "InvalidCredential": "Login and/or password are not correct",
-    "ValidRegister": "Your inscription is valid !"
+    "ValidRegisterMessage": "Your inscription is valid !",
+    "ValidRegisterAction": "Play with us"
   }
 }

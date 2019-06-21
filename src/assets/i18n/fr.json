@@ -14,6 +14,7 @@
     "PasswordConfirm": "Confirmer le mot de passe",
     "InvalidPassword": "Les mots de passe ne correspondent pas",
     "InvalidCredential": "Le login et/ou le mot de passe ne correspondent pas",
-    "ValidRegister": "L'inscription a fonctionné"
+    "ValidRegisterMessage": "L'inscription a fonctionné",
+    "ValidRegisterAction": "Entre dans le game"
   }
 }

@@ -121,3 +121,26 @@ $disabled: #696969;
     }
   }
 }
+
+/***********/
+/*Snack Bar*/
+/***********/
+
+snack-bar-container.snack-bar {
+  background: $white;
+  text-align: center;
+  color: $primary-color;
+  -webkit-box-shadow: 0px 0px 40px 0px rgba(190, 190, 254, 1);
+  -moz-box-shadow: 0px 0px 40px 0px rgba(190, 190, 254, 1);
+  box-shadow: 0px 0px 40px 0px rgba(190, 190, 254, 1);
+  .mat-simple-snackbar {
+    flex-direction: column;
+    .mat-simple-snackbar-action {
+      margin: 0;
+      background-color: $primary-color;
+      color: $white;
+      border-radius: 50px;
+      font-size: 12px;
+    }
+  }
+}
